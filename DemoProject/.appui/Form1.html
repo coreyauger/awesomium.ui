@@ -51,14 +51,14 @@
             onResize();
         });
     }
- 
+
 
     $(function () {
         $(document).mousemove(function (event) {
             Mouse.x = event.pageX;
             Mouse.y = event.pageY;
         });
-       
+
         $('.fadein').fadeIn('slow');
         $('.auto-select').click(function () {
             $(this).select();
@@ -73,7 +73,19 @@
                 ScriptInterface.call('JSOpenUrl', $(this).attr('data-url'));
             }
         });
-        
+
+        $('#bOpenNotepad').click(function () {
+            if (ScriptInterface) {
+                ScriptInterface.call('JSOpenNotepad', 'Optional Arguments that can be passed to the function');
+            }
+        });
+
+        $('#txtCpy').click(function () {
+            if (ScriptInterface) {
+                ScriptInterface.call('JSCopyToClipboard', $(this).val());
+            }            
+        });
+
 
         if (ScriptInterface) {
             ScriptInterface.call('JSLoad');
@@ -116,13 +128,18 @@
                     
                     <div id="home" class="tab-pane" style="display: block;">
                         <h1>Sub Section 1</h1>  
-                        <p>Do what you want.. you are in HTML5 ... you are free..</p>                                         
+                        <p>Do what you want.. you are in HTML5 ... you are free..</p>        
+                        <br />
+                        <button id="bOpenNotepad">This button will open Notepad</button>
+                        <input type="text" id="txtCpy" value="Clicking this will copy the text to your clipboard" />
+                        <a href="javascript: ;" class="linkout" data-url="http://www.coreyauger.com">This will launch your default browser, pointing it at a ULR</a>   
+                                                      
                     </div>
 
 
                     <div id="sources" class="tab-pane">
                         <h1>Sub Section 2</h1>  
-                        <p>Here is some page stuff...</p>
+                        
                      </div>
 
 

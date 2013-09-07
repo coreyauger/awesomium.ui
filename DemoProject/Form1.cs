@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 using awesomium.ui;
 
@@ -24,8 +25,13 @@ namespace DemoProject
             base.OnCloseButtonClick += (ss, ee) =>
             {
                 this.Close();
-            };
-            
+            };            
+        }
+
+        public void JSOpenNotepad(string args)
+        {
+            Process.Start("notepad.exe");
+            base.WebBrowser.ExecuteJavascript("alert('notepad is open');");
         }
     }
 }
