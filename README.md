@@ -29,7 +29,7 @@ Side Note: Awesomium has a Unity3d plugin for Mac/Windows game builds.. also ver
 ## Inspiration
 Game companies have been doing this for years.  Both “Stream” and “Origin” are native browser based UI.  The goal with my project is to provide some simple extensions to the Awesomium based libraries that get you up and running fast.  Also to provide a good looking UI example … Similar to “Steam” and “Origin”
 
-![UI 1](www.coreyauger.com/images/aui2.jpg)
+![UI 1](http://www.coreyauger.com/images/aui2.jpg)
 
 ## Usage
 I have provided a demo project that you can refrence to get you up and running.  The basic idea is this:
@@ -79,4 +79,4 @@ base.Webbrowser.ExecuteJavascript( "javascript to execute in here" );
 
 ### Demo Project
 
-![UI 2](www.coreyauger.com/images/aui1.jpg)
+![UI 2](http://www.coreyauger.com/images/aui1.jpg)
