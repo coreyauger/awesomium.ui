@@ -1,0 +1,767 @@
+﻿body
+{
+	background-color: #383635;
+	margin: 0px;
+	padding: 1px;
+	overflow: hidden;
+	font-family: Arial, Verdana;
+	color: #CCC;
+	font-size: 12px;
+}
+html body a
+{
+	color: #900000;
+}
+
+body.loader
+{
+	width: 500px;
+}
+.tab-pane
+{
+	display: none;
+}
+
+#updateForm
+{
+	position: absolute;
+	left: 600px;
+	width: 100%;
+	top: 0px;
+}
+#busy
+{
+	position: absolute;
+	left: 600px;
+	width: 100%;
+	top: 0px;
+	display: none;
+}
+div.top-gradient
+{
+	width: 100%;
+	height: 35%;
+	position: absolute;
+	top: 0px;
+	background: -webkit-linear-gradient(top, #000000, #383635);
+}
+.fadein
+{
+	display: none;
+}
+.dyn
+{
+	-webkit-transition: all 1s ease-in-out;  
+	transition: all 1s ease-in-out;	
+}
+.blinds
+{
+	position: absolute; 
+	overflow: hidden; 
+	width:100%; 
+	height:100%; 
+}
+#loginForm
+{
+	position: absolute;
+	width: 434px;
+	padding: 20px; 
+	overflow: hidden;	
+}
+.red
+{
+	color: #900000;
+}
+
+#logo
+{
+	padding: 15px;
+}
+div.content-wrap
+{
+	border: 1px solid #4d4b48;
+	border-radius: 4px;
+	position: absolute;	
+	margin: 70px 10px 10px 10px;
+}
+div.content
+{
+	border: 1px solid #000;
+	border-radius: 4px;
+	background-color: #000;
+	min-height: 250px;
+}
+#installProgress
+{
+	display: none;
+}
+#installProgress > div
+{
+	border: 1px solid #4d4b48;
+	border-radius: 4px;
+	width: 70%;
+	height: 50px;
+	margin: 30px 15% 5px 15%;
+	padding: 5px;
+	position: relative;
+}
+#installProgress > div > div
+{  /* progress bar */
+	border: 1px solid #000;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#c80000), to(#9d0000));
+	/* Safari 5.1, Chrome 10+ */
+	background: -webkit-linear-gradient(top, #9d0000, #c80000);
+	width: 0px;
+	height: 100%;
+}
+.loader div.content
+{
+	width: 474px;
+}
+
+img#logo
+{
+	margin: 15px auto;
+}
+
+
+.submit
+{
+	-webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+	width: 220px;	
+	color: #DDD;
+	border: 1px solid #666;
+	border-radius: 5px;
+	height: 42px;
+	font-weight: bold;
+	/* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#c80000), to(#9d0000));
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #9d0000, #c80000);
+
+}
+.submit:hover
+{
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+
+/************* MAIN ****************/
+.main .content
+{
+	height: 100%;
+	border: 2px solid #000;
+	background: -webkit-linear-gradient(top, #383635, #000000);
+	overflow: auto;
+}
+.main .content .fadein
+{
+	margin: 10px;
+}
+#social
+{
+	width: 250px;
+	top: 0px;
+	
+}
+button
+{
+	text-align: center;
+	background: -webkit-linear-gradient(top, #5b5755, #6e6a69);
+	vertical-align: middle;
+	color: #FFF;
+	padding: 7px 15px;
+	border: 1px solid #736f6e;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-transition: all 1s ease-in-out;  
+	transition: all 1s ease-in-out;	
+}
+#bAddSource
+{	
+	margin-top:50px;
+}
+button:hover
+{
+	background: -webkit-linear-gradient(top, #6e6a69, #5b5755);
+	border: 1px solid #FFF;	
+}
+#main
+{
+	width: 520px;
+	left: 250px;	
+	margin-left: 20px;
+	top: 0px;
+}
+#info
+{
+	width: 780px;
+	left: 0px;	
+	bottom: 10px;
+		
+}
+#info .content
+{
+	height: 200px;
+	min-height: 200px;
+	background: -webkit-linear-gradient(top, #000000, #383635);
+	overflow: hidden;
+	position: relative;
+}
+.slide
+{
+	width: 100%;
+	overflow: auto;
+	position: absolute;
+	left: 3000px;
+	height: 200px;		
+}
+.slide header
+{
+	background: -webkit-linear-gradient(top, #5b5755, #6e6a69);
+	vertical-align: middle;
+	color: #FFF;
+	margin: 0px 1px;	
+	padding: 10px 15px;	
+	border: 1px solid #736f6e;	
+	border-top-left-radius: 5px; 
+	border-top-right-radius: 5px;
+	border-bottom: 1px solid #000;
+	position: relative;
+}
+.slide header .tools
+{
+	position:absolute;
+	right: 10px;
+	top: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+.slide header .tools li
+{
+	float: left;
+	list-style: none;
+}
+
+input[type=checkbox] {
+	display: none;
+}
+.checkbox label:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 5px 10px 5px 0px;
+	bottom: 1px;
+	
+	background-color: #aaa;
+	border-radius: 5px;
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+.checkbox label
+{
+	margin-right: 20px;
+}
+input[type=checkbox]:checked + label:before {
+	content: "\2713";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 15px;
+	color: #900000;
+	text-align: center;
+    line-height: 15px;
+}
+
+ul.src-opts
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.src-opts li
+{
+	padding: 5px 20px;
+	list-style: none;
+	border-bottom: 1px solid #999;
+	display: block;
+	-webkit-transition: all 1s ease-in-out;  
+	transition: all 1s ease-in-out;	
+	font-size: 16px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+ul.src-opts li:hover
+{
+	background-color: #333;
+}
+
+ul.src-opts li > img
+{
+	margin-right: 10px;
+}
+
+.sect-static,
+.sect
+{
+	position: relative;	
+}
+.sect-static header,
+.sect header
+{
+	
+	margin-top: 10px;
+	background-color: #373b3f;
+	font-size: 18px;
+	padding: 10px 35px;
+	cursor: pointer;
+}
+.sect header .checkbox
+{
+	position: absolute;
+	left: 10px;
+	top: 9px;
+}
+.sect-static section,
+.sect section
+{
+	-webkit-transition: all 1s ease-in-out;  
+	transition: all 1s ease-in-out;	
+	height: 0px;	
+	background-color: #151716;
+	overflow: hidden;	
+}
+.sect-static section
+{
+	height: auto;
+}
+
+.sect section.active
+{
+	height: 150px;
+}
+
+.uimg
+{
+	width: 48px;
+	height: 48px;
+	border-radius: 7px;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+#chatText
+{
+	margin: 5px;
+}
+#chatText span
+{
+	font-size: 17px;
+	font-family: Arial, Verdana;
+	display: block;
+}
+#chatText span.you
+{
+	color: #CCC;
+}
+#chatText span.friend
+{
+	color: #900000;
+}
+
+select,
+textarea,
+input[type=number],
+input[type=text],
+input[type=password]
+{	
+	border-radius: 3px;
+	background-color: #EEE;
+	height: 22px;
+	margin: 10px 10px 10px 0px;
+	font-size: 17px;
+	font-family: Arial, Verdana;
+	width: 100px;
+}
+select
+{
+	height: 30px;
+	font-size: 22px;
+}
+
+input[type=password],
+input[type=text]
+{
+	width: 100%;
+}
+
+.sect-static section > div,
+.sect section > div
+{
+	padding: 20px;
+}
+
+div.span-dest
+{
+	width: 100%;
+	height: 165px;
+	background: url(../img/span1.jpg) no-repeat top left;
+	position: relative;
+	overflow: hidden;
+}
+div.span-settings
+{
+	width: 100%;
+	height: 165px;
+	background: url(../img/span2.jpg) no-repeat top left;
+	position: relative;
+	overflow: hidden;
+}
+div.span-remote
+{
+	width: 100%;
+	height: 165px;
+	background: url(../img/span3.jpg) no-repeat top left;
+	position: relative;
+	overflow: hidden;
+}
+div.span-dest h2
+{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	margin: 0px;
+	font-size: 40px;		
+}
+
+.tab-pane h2
+{
+	color: #CCC;
+	font-size: 18px;
+	display: block;
+	padding: 10px;
+	background-color: #373b3f;
+	margin: 0px;
+}
+
+
+/***** Menu ******/
+
+ul.menu
+{
+	
+	margin: 0px;
+	padding: 0px;	
+}
+ul.menu li
+{
+	float: left;
+	text-align: center;
+	list-style: none;
+	background: -webkit-linear-gradient(top, #5b5755, #6e6a69);
+	vertical-align: middle;
+	color: #FFF;
+	padding: 7px 15px;
+	border: 1px solid #736f6e;
+	border-right: 1px solid #000;
+	cursor: pointer;
+}
+ul.menu li:first-child
+{
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+ul.menu li:last-child
+{
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-right: 1px solid #736f6e;
+}
+ul.menu li:hover
+{
+	background: -webkit-linear-gradient(top, #6e6a69, #5b5755);	
+}
+
+#topNav
+{
+	margin: 0px;
+	padding:0px;
+	position: absolute;
+	top: 34px;
+	right: 10px;
+	
+}
+#topNav > li
+{
+	list-style: none;
+	position: relative;
+	float: left;
+	margin-left: 5px;
+}
+.hoverMenu
+{
+	position: absolute;
+	z-index: 999999;
+	top: 35px;
+	right: 0px;
+	width: 150px;
+	display: block;
+	background-color: #d3d3d3;
+	border: 1px solid #EEE;
+	border-radius: 5px;	
+	box-shadow: 0 5px 10px rgba(10, 10, 10, .5);
+	padding: 10px;
+	display:none;
+}
+.warn
+{
+	background-color: Yellow;
+	color: #900000;
+	padding: 4px;
+	font-weight: boldl
+}
+
+.hoverMenu .top-carret
+{
+	z-index: 99;
+	position: absolute;
+	color: #d3d3d3;
+	right: 11px;
+	top: -16px;
+	font-size: 30px;
+}
+.hoverMenu ul
+{
+	margin: 0px;
+	padding: 0px;
+}
+.hoverMenu ul li
+{
+	color: #333;
+	font-size: 14px;
+	text-align: right;
+	font-weight: bold;		
+	cursor: pointer;
+	list-style: none;
+}
+.hoverMenu ul li:hover
+{
+	background-color: #EEE;
+	border-radius: 5px;
+}
+
+.profile-img
+{
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;	
+	border: 1px solid #FFF;
+}
+
+span.ibug,
+span.iuser {	
+	width: 40px;
+	height: 28px;
+	display: block;
+	border-radius: 7px;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+span.ibug
+{
+	background: url(../img/iBug.png) no-repeat !important;
+}
+span.iuser
+{
+	background: url(../img/iUser.png) no-repeat !important;
+}
+span.ibug:hover
+{
+	background:#900000 url(../img/iBug.png) no-repeat !important;
+}
+span.iuser:hover
+{
+	background:#900000 url(../img/iUser.png) no-repeat !important;
+}
+
+span.record
+{
+	background-color: #900000;
+	border-radius: 10px;
+	width: 20px;
+	height: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #CCC;
+}
+
+.pq-resize
+{
+	position: absolute;
+}
+
+.pq-resize-bottom
+{	
+	bottom: 0px;
+	height: 5px;
+	width: 100%;
+	cursor: s-resize;	
+}
+.pq-resize-right
+{	
+	right: 0px;
+	height: 100%;
+	width: 5px;
+	cursor: e-resize;	
+}
+.pq-resize-left
+{	
+	left: 0px;
+	height: 100%;
+	width: 5px;
+	cursor: w-resize;	
+}
+
+.hoverCard
+{
+	position: absolute;
+	z-index: 999999;
+	background-color: #1d1f20;
+	border: 7px solid #cccccc;
+	border-radius: 10px;
+	min-width: 200px;
+	min-height: 100px;
+	
+	box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+	padding: 10px 20px;
+}
+#gameInfo
+{
+	top: 100px;
+	left: 250px;
+	display:none;
+	cursor: pointer;
+}
+#gameInfo .uinfo
+{
+	
+}
+#gameInfo h4
+{
+	background-color: #383635;
+	color: #EEE;
+	padding: 10px;
+	margin: 0px;
+}
+#gameInfo .uinfo img
+{
+	border-radius: 5px;
+	width: 25px;
+	height: 25px;
+}
+.info
+{
+	padding: 0px;
+	margin: 0px;
+}
+.info li
+{
+	list-style: none;
+	padding: 4px 10px;
+}
+#gameInfo .uname
+{
+	padding-left: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********** Scroll Bars **************************/
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px; }
+ 
+::-webkit-scrollbar:hover {
+  height: 18px; }
+ 
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  height: 15px;
+  width: 13px;
+  display: block;
+  background: #101211;
+  background-repeat: no-repeat; }
+ 
+::-webkit-scrollbar-button:horizontal:decrement {
+  background-image: url(../img/horizontal-decrement-arrow.png);
+  background-position: 4px 3px; }
+ 
+::-webkit-scrollbar-button:horizontal:increment {
+  background-image: url(../img/horizontal-increment-arrow.png);
+  background-position: 3px 3px; }
+ 
+::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url(../img/vertical-decrement-arrow.png);
+  background-position: 3px 4px; }
+ 
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url(../img/vertical-increment-arrow.png);
+  background-position: 3px 4px; }
+ 
+::-webkit-scrollbar-button:horizontal:decrement:active {
+  background-image: url(../img/horizontal-decrement-arrow-active.png); }
+ 
+::-webkit-scrollbar-button:horizontal:increment:active {
+  background-image: url(../img/horizontal-increment-arrow-active.png); }
+ 
+::-webkit-scrollbar-button:vertical:decrement:active {
+  background-image: url(../img/vertical-decrement-arrow-active.png); }
+ 
+::-webkit-scrollbar-button:vertical:increment:active {
+  background-image: url(../img/vertical-increment-arrow-active.png); }
+ 
+::-webkit-scrollbar-track-piece {
+  background-color: #151716; }
+ 
+::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
+  border: 1px solid #0d0d0d;
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666; }
+ 
+::-webkit-scrollbar-thumb:horizontal {
+  width: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(100%, #333333));
+  border: 1px solid #1f1f1f;
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666; }
