@@ -52,7 +52,7 @@ Make sure to change the “Build Action” for all your html/css/img content to 
 ## Communication
 Communicating with your UI layer is a breeze.  This is all done through javascript and json.  There are 2 directions for your communication
 
-### HTML UI to Native C#
+### HTML UI to Native C-Sharp#
 Inside you javascript create a call like so
 
 ```javascript
