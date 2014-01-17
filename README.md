@@ -80,3 +80,7 @@ base.Webbrowser.ExecuteJavascript( "javascript to execute in here" );
 ### Demo Project
 
 ![UI 2](http://www.coreyauger.com/images/aui1.jpg)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/coreyauger/awesomium.ui/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
